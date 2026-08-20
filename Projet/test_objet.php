@@ -19,11 +19,11 @@ $plusRapide = $voiture->plusRapide($moto);
 </head>
 <body>
     <?php 
-        echo $voiture->detect();
-        echo $moto->detect();    
-        echo $voiture->getVitesse();
-        echo $moto->getVitesse();
-        echo $plusRapide->getNomVehicule();
+        echo "<p>".$voiture->detect()."</p>";
+        echo "<p>".$moto->detect()."</p>";    
+        echo "<p>".$voiture->getVitesse()."</p>";
+        echo "<p>".$moto->getVitesse()."</p>";
+        echo "<p>".$plusRapide->getNomVehicule()."</p>";
     ?>
 </body>
 </html>

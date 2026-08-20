@@ -12,12 +12,12 @@ class Vehicule{
         $this->vitesse = $gear;
     }
 
-    public function detect(){
+    public function detect(): string{
         if($this->nbrRoue <= 2){
-            return "<p>C'est une moto</p>";
+            return "C'est une moto";
         }
         else{
-            return "<p>C'est une voiture</p>";
+            return "C'est une voiture";
         }
     }
     
@@ -25,15 +25,15 @@ class Vehicule{
         return $this->nomVehicule;
     }
 
-    public function getVitesse(){
-        return "<p>".$this->vitesse."</p>";
+    public function getVitesse(): float{
+        return $this->vitesse;
     }
 
-    public function boost(){
+    public function boost(): void{
         $this->vitesse += 50;
     }
 
-    public function plusRapide(Vehicule $vehicule){
+    public function plusRapide(Vehicule $vehicule): Vehicule{
         if($this->vitesse >= $vehicule->getVitesse()){
             return $this;
         }

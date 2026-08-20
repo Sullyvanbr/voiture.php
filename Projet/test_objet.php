@@ -6,7 +6,7 @@ $voiture = new Vehicule("Mercedes CLK", 4, 250);
 $moto = new Vehicule("Honda CBR", 2, 280);
 $voiture->boost();
 $moto->boost();
-
+$plusRapide = $voiture->plusRapide($moto);
 ?>
 
 
@@ -23,6 +23,7 @@ $moto->boost();
         echo $moto->detect();    
         echo $voiture->getVitesse();
         echo $moto->getVitesse();
+        echo $plusRapide->getNomVehicule();
     ?>
 </body>
 </html>

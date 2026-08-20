@@ -6,7 +6,7 @@ class Vehicule{
     private float $vitesse;
     
 
-    public function __construct(string $nameCar, float $nbWheel, int $geer){
+    public function __construct(string $nameCar, float $nbWheel, int $gear){
         $this->nomVehicule = $nameCar;
         $this->nbrRoue = $nbWheel;
         $this->vitesse = $gear;

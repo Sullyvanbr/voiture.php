@@ -4,7 +4,6 @@ class Vehicule{
     private string $nomVehicule;
     private int $nbrRoue;
     private float $vitesse;
-    
 
     public function __construct(string $nameCar, float $nbWheel, int $gear){
         $this->nomVehicule = $nameCar;
@@ -33,10 +32,15 @@ class Vehicule{
         $this->vitesse += 50;
     }
 
-    public function plusRapide(Vehicule $vehicule): Vehicule{
-        if($this->vitesse >= $vehicule->getVitesse()){
+    public function plusRapide(Vehicule $vehicule): Vehicule | array{
+        if($this->vitesse > $vehicule->getVitesse()){
             return $this;
         }
-        return $vehicule;
+        else if($this->vitesse < $vehicule->getVitesse()){
+            return $vehicule;
+        }
+        else{
+            return [$this, $vehicule];
+        }
     }
 }

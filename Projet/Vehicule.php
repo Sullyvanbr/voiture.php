@@ -21,6 +21,10 @@ class Vehicule{
         }
     }
     
+    public function getNomVehicule(): string {
+        return $this->nomVehicule;
+    }
+
     public function getVitesse(){
         return "<p>".$this->vitesse."</p>";
     }
@@ -29,4 +33,10 @@ class Vehicule{
         $this->vitesse += 50;
     }
 
+    public function plusRapide(Vehicule $vehicule){
+        if($this->vitesse >= $vehicule->getVitesse()){
+            return $this;
+        }
+        return $vehicule;
+    }
 }

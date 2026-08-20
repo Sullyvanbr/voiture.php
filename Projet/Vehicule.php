@@ -9,7 +9,7 @@ class Vehicule{
     public function __construct(string $nameCar, float $nbWheel, int $geer){
         $this->nomVehicule = $nameCar;
         $this->nbrRoue = $nbWheel;
-        $this->vitesse = $geer;
+        $this->vitesse = $gear;
     }
 
     public function detect(){
